@@ -1,0 +1,46 @@
+.footer-nav-container {
+    // justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 0.5px 0px 0px #DDDDDD;
+    color: rgb(72, 72, 72);
+    font-size: 0.9rem;
+    // position: fixed;
+    z-index: 345;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // height: 70px;
+    line-height: 1.25rem;
+    padding-block: 25px;
+    .main-div {
+        width: 30vw;
+        padding-inline: 50px;
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            margin: 0;
+            padding: 0;
+        }
+        span {
+            margin: 0;
+            padding: 0;
+        }
+        .i18n-div {
+            width: 10vw;
+            font-weight: 600;
+        }
+        .icon-div {
+            width: 5vw;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media (max-width: $break-narrow) {
+    .footer-nav-container {
+        display: none;
+    }
+}

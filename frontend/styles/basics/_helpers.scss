@@ -1,0 +1,76 @@
+.clean-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.clean-btn {
+    border: none !important;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pretty-btn {
+    background-color: $redAirbnb;
+    background-image: linear-gradient(90deg, #e61e4d 0, #e31c5f 50%, #d70466);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 20px;
+}
+
+.gray-box-shadow {
+    box-shadow: inset 0px -0.5px 0px 0px #DDDDDD;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.capitalize {
+    text-transform:capitalize;
+}
+
+.el-loading-spinner .path {
+    stroke: $redAirbnb !important;
+}

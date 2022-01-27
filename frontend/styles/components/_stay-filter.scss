@@ -1,0 +1,163 @@
+.max-filter {
+    transform-origin: top;
+    position: absolute;
+    transition: all 0.2s;
+    top: 75px;
+    line-height: 20px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 5%) 0px 4px 12px;
+    background-color: #FFF;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 40px;
+    font-size: 14px;
+    height: 67px;
+    max-width: 850px;
+    align-self: center;
+    // transition: height .4s ease-out, width .4s ease-in;
+    input:focus-visible {
+        outline: none;
+    }
+    input::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+    input[type="search"] {
+        min-width: 200px;
+    }
+    label {
+        font-size: 12px;
+        font-weight: 800;
+    }
+    input::placeholder {
+        font-size: 14px;
+        color: rgb(113, 113, 113);
+        font-weight: 400;
+    }
+    button,
+    input {
+        background-color: transparent;
+        border: none;
+        box-shadow: none !important;
+        font-family: airbnb-regular;
+        margin: 0;
+    }
+    .search-btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        // width: 48px;
+        align-items: center;
+        color: #FFF;
+        border-radius: 50%;
+        border: none;
+        background-color: $redAirbnb;
+        margin-right: 8px;
+        margin-top: 8px;
+        padding: 0 8px;
+        &:before {
+            font-family: fas;
+            content: '\f002';
+            color: #fff;
+            font-size: 16px;
+            padding: 0 8px;
+        }
+        // background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+        // background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+        //   --mouse-x: 53.625;
+        //   --mouse-y: 66.6667;
+        span {
+            font-size: 16px;
+            padding: 0 8px;
+            display: none;
+        }
+    }
+}
+
+.input-container,
+.max-filter .checkin,
+.max-filter .checkout {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 12.5px 12.5px 12.5px 25px;
+}
+
+.first-container {
+    text-indent: 15px;
+     ::placeholder {
+        text-indent: 15px;
+    }
+    input {
+        text-indent: 15px;
+    }
+}
+
+.input-container:first-child:hover,
+.input-container:last-child:hover,
+.max-filter .checkin:hover,
+.max-filter .checkout:hover {
+    height: 100%;
+    background-color: #ebebeb;
+}
+
+.mx-icon-calendar {
+    display: none !important;
+}
+
+.filter-container {
+    .guests-modal {
+        display: flex;
+        position: absolute;
+        line-height: 20px;
+        top: 123.25px;
+        right: 300px;
+        width: 350px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+        z-index: 2000;
+        padding: 20px;
+        .guest-btns {
+            display: flex;
+            .guests-num {
+                display: inline-block;
+                min-width: 20px;
+                text-align: center;
+            }
+            button {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                cursor: pointer;
+                color: rgb(113, 113, 113);
+                border: 1px solid rgb(176, 176, 176);
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 16px !important;
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    border-color: rgb(34, 34, 34);
+                    color: rgb(34, 34, 34);
+                }
+            }
+        }
+    }
+    // transition: 1s;
+}
+
+.filter-container.hide {
+    .max-filter {
+        transform: scale(0.35, 0.74);
+        // transform: origin-top;
+        opacity: 0;
+        top: 55px;
+        position: fixed;
+    }
+}

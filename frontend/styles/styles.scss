@@ -1,0 +1,27 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+// BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+//COMPONENTS
+@import 'components/main-header';
+@import 'components/main-explore';
+@import 'components/main-footer';
+@import 'components/home-page';
+@import 'components/stay-filter';
+@import 'components/stay-details';
+@import 'components/order-modal';
+@import 'components/login';
+@import 'components/user-account';
+@import 'components/user-wishlist';
+@import 'components/user-trips';
+@import 'components/user-notifications';
+@import 'components/host';
+@import 'components/host-dashboard';
+@import 'components/confirm-and-pay';
+@import 'components/congrats-page';
+@import 'components/user-msg'

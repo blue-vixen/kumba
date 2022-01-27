@@ -1,0 +1,433 @@
+.stay-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(326px, 1fr));
+    column-gap: 24px;
+    row-gap: 40px;
+    padding-top: 16px;
+    padding-bottom: 250px;
+
+    @media (max-width: $break-narrow) {
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+// ---------------------------------FILTER BTNS------------------------------
+.explore-btns {
+    display: flex;
+    align-items: center;
+    .explore-btn {
+        height: 38px;
+        cursor: pointer !important;
+        border: 1px solid rgb(221, 221, 221) !important;
+        background-color: rgb(255, 255, 255) !important;
+        outline: none !important;
+        margin: 0px !important;
+        border-radius: 30px !important;
+        color: rgb(34, 34, 34) !important;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 18px !important;
+        margin-right: 8px !important;
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        &:hover {
+            border-color: #222222 !important;
+        }
+    }
+    .active {
+        border: 2px solid #222222 !important;
+        background-color: #f7f7f7 !important;
+    }
+    .buffer {
+        margin-right: 8px !important;
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        font-size: 20px;
+        color: #dddddd;
+    }
+    .btn-expend {
+        display: flex;
+        place-content: center !important;
+        font-size: 14px !important;
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .btn-txt {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 18px !important;
+    }
+}
+
+// ----------------------price-filter----------------------------------------
+.price-filter-container {
+    position: absolute;
+    top: 285px;
+    left: 80px;
+    height: 353px;
+    width: 440px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+    padding: 20px;
+    .avg {
+        text-align: start;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: rgb(34, 34, 34);
+        // padding-bottom: 25px;
+        padding-top: 8px;
+    }
+    .price-filter {
+        padding: 20px;
+    }
+    .price-select-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        h3 {
+            margin: 8px;
+            color: #222222;
+            font-size: 16px;
+            font-weight: lighter;
+            line-height: 20px;
+        }
+        .price-select {
+            height: 56px;
+            width: 168px;
+            background: rgb(255, 255, 255) !important;
+            border: 0.5px solid rgba(118, 118, 118, 0.28) !important;
+            border-radius: 9px !important;
+            &:focus-within {
+                border: 2px solid rgb(0, 0, 0) !important;
+            }
+            .label {
+                text-align: start;
+                margin-inline-start: 12px;
+                margin-top: 8px;
+                font-size: 11px;
+                line-height: 20px;
+                color: rgb(113, 113, 113);
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            }
+            .price-change {
+                display: flex;
+                align-items: flex-end;
+                margin-inline-start: 12px;
+                font-size: 15px !important;
+            }
+            input {
+                border: none;
+                width: 50px;
+                font-size: 15px !important;
+                &:focus {
+                    outline: none !important;
+                }
+            }
+        }
+    }
+    .price-save {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 14px;
+        border-top: 1px solid rgb(235, 235, 235);
+        .clear {
+            cursor: pointer;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            color: #222222;
+            text-decoration: underline;
+        }
+        .save {
+            cursor: pointer;
+            margin: 0px;
+            text-align: center;
+            text-decoration: none;
+            width: auto;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            outline: none;
+            padding: 8px 16px;
+            border: none;
+            background: rgb(34, 34, 34);
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    //     svg rect {
+    //         fill: red;
+}
+// }
+
+.vue-histogram-slider-wrapper {
+    width: 360px !important;
+    --holder-color: #ddd !important;
+    --handle-color: #ffffff !important;
+    --grid-text-color: silver;
+    --line-height: 6px;
+    --font-family: Arial, sans-serif;
+    --font-size: 12;
+    --hist-slider-gap: -30px;
+    --handle-size: 26px;
+}
+
+.irs-handle {
+    top: 22px !important;
+}
+
+// ----------------------type-filter----------------------------------------
+.type-filter-container {
+    position: absolute;
+    top: 285px;
+    left: 172px;
+    width: 340px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+    padding: 20px;
+    .type-filter {
+    }
+    .type-save {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 14px;
+        border-top: 1px solid rgb(235, 235, 235);
+        .clear {
+            cursor: pointer;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            color: #222222;
+            text-decoration: underline;
+        }
+        .save {
+            cursor: pointer;
+            margin: 0px;
+            text-align: center;
+            text-decoration: none;
+            width: auto;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            outline: none;
+            padding: 8px 16px;
+            border: none;
+            background: rgb(34, 34, 34);
+            color: rgb(255, 255, 255);
+        }
+    }
+    .type-of-place {
+        .container {
+            padding-top: 12px !important;
+            display: block;
+            position: relative;
+            padding-left: 19px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            text-align: start;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .type {
+            padding-left: 19px;
+            .type-header {
+                font-size: 16px;
+                line-height: 20px;
+                color: #222222;
+            }
+            .type-title {
+                font-size: 14px;
+                line-height: 20px;
+                color: #717171;
+            }
+        }
+
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            // opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            background-color: #ffffff;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(176, 176, 176);
+            border-radius: 4px;
+        }
+        .container:hover input ~ .checkmark {
+            border-color: rgb(0, 0, 0);
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #222222;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 8px;
+            top: 4px;
+            width: 4px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// ----------------------------------------STAY PREVIEW---------------------------------------
+.stay-preview {
+    .stay-preview-slideshow {
+        position: relative;
+        .like-stay {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 9;
+            color: #00000080;
+            -webkit-text-stroke: white;
+            -webkit-text-stroke-width: 1px;
+            height: 24px;
+            width: 24px;
+        }
+        .active {
+            color: $redAirbnb;
+        }
+    }
+    .stay-preview-info {
+        .reviews-preview {
+            display: flex;
+            align-items: center;
+            font-size: 14px !important;
+            padding-top: 10px;
+
+            .star-preview {
+                margin-right: 4px !important;
+                .material-icons-outlined {
+                    color: $redAirbnb;
+                    font-size: 18px;
+                }
+            }
+            .review-avg {
+                color: #222222;
+            }
+            .reviews-total {
+                color: #717171;
+            }
+        }
+        .property-type {
+            padding-top: 6px;
+        }
+        .stayname {
+            padding-top: 2px;
+        }
+        .stay-price {
+            padding-top: 4px;
+        }
+    }
+}
+
+// ------------------------------SLIDESHOW - CARUOSEL---------------------------------------
+.preview-slideshow {
+    img {
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.el-carousel__container {
+    .el-carousel--horizontal {
+        display: block !important;
+        width: 362px;
+        height: 262.25px;
+    }
+}
+
+.el-carousel__button {
+    height: 6px !important;
+    width: 6px !important;
+    background-color: white;
+    border-radius: 50% !important;
+}
+
+.el-carousel__arrow {
+    border-radius: 50% !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    outline: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: rgb(34, 34, 34) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgb(0 0 0 / 18%) 0px 2px 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+}
+
+
+// @media(max-width: $break-narrow) {
+//     .main-layout2.explore-page {
+//         *> {
+//             grid-column: 1;
+
+//         }
+//     }
+// }

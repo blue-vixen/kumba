@@ -1,0 +1,67 @@
+.login-container {
+    margin-top: 100px;
+    height: 80vh;
+}
+
+.login-form-container {
+    align-items: center;
+    
+}
+
+.login-form {
+    width: 30vw;
+    border: 1px solid #dbdbdb;
+    border-radius: 13px;
+    box-shadow: 0 0 0 #000;
+}
+
+.login-form-header {
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    // padding: 15px 20px;
+}
+
+.login-form-body {
+    text-align: center;
+    padding-inline: 25px;
+    padding-bottom: 15px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #b6b6b6;
+    border-radius: 13px;
+    margin: 5px 5px 5px 0;
+    font-family: airbnb-regular, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.login-btn {
+    border: none;
+    width: 100%;
+    background-color: #ff385c;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 13px;
+    color: #fff;
+    font-weight: 600;
+    font-family: airbnb-regular, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.login-actions-btn {
+    align-items: center;
+    width: 100%;
+}
+
+.actions-btn {
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: airbnb-regular, sans-serif
+}

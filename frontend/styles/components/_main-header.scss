@@ -1,0 +1,339 @@
+.logo {
+    width: 150px;
+}
+
+.logo-txt {
+    color: $redAirbnb;
+    font-family: airbnb-medium;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    &::after {
+        content: '\f834';
+        font-family: fab;
+    }
+}
+
+.logo-small {
+    font-size: 18px;
+    color: rgb(72, 72, 72);
+}
+
+.nav {
+    flex-wrap: nowrap;
+    a {
+        padding: 0 15px;
+        font-size: 16px; 
+        // font-family: airbnb-medium;
+    }
+}
+
+.main-header:not(.fullheader) {
+    grid-template-rows: 1fr;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;
+}
+
+.main-header {
+    grid-template-rows: 1fr 1fr;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    >* {
+        grid-column: 2;
+    }
+    width: 100%;
+    z-index: 8000;
+    background-color: white;
+}
+
+.main-header.fullheader {
+    height: 160px;
+}
+
+.main-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    // cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.9s;
+    pointer-events: auto;
+}
+.main-header.fullheader.home-page.top {
+    background: linear-gradient(180deg,rgba(0,0,0,.5) 50%,rgba(0,0,0,.05) 85%,transparent 90%);
+    .logo-txt {
+        color: white;
+        text-shadow: 1px 1px 2px #000000;
+    }
+    background-color: transparent;
+    box-shadow: none;
+    .nav a {
+        color: #FFFFFF;
+        text-shadow: 1px 1px 2px #000000;
+        font-family: airbnb-medium;
+    }
+    .notification-btn {
+        color: #FFFFFF
+    }
+}
+
+.user-menu-btn {
+    color: #484848;
+    padding: 5px 5px 5px 15px;
+    border-radius: 200px;
+    background-color: #fff;
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    line-height: 20px;
+    &:hover {
+        box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+    }
+    &::before {
+        font-family: fas;
+        content: '\f0c9';
+    }
+    span {
+        margin-left: 12px;
+        font-size: 30px;
+        color: #484848;
+        &.loggedin {
+            filter: invert(100%);
+        }
+    }
+    .avatar {
+        margin-left: 12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+.main-header.details {
+    @include for-wide-layout {
+        @include layoutGTC($break-wide)
+    }
+    >* {
+        grid-column: 2;
+    }
+    position: static;
+    .main-header-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .mini-filter {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.user-nav {
+    color: #222222;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    background-color: #fff;
+    border-radius: 12px 12px;
+    width: 240px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 0px 3px 0px;
+    a {
+        font-size: 14px;
+        color: #222222;
+        padding: 10px 20px;
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            background-color: #ececec;
+        }
+    }
+}
+
+.user-nav2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 0px 3px 0px;
+    .a1 {
+        font-family: airbnb-medium;
+    }
+    a {
+        padding: 15px 20px;
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            background-color: #ececec7c;
+        }
+    }
+}
+
+.mini-filter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 20px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 5%) 0px 4px 12px;
+    background-color: #FFF;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 40px;
+    height: 48px;
+    padding: 0 7px 0 16px;
+    width: 300px;
+    font-size: 14px;
+    text-indent: 5px;
+    &:hover {
+        box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+        transition: box-shadow 0.2s ease 0s;
+    }
+    span {
+        &:before {
+            font-family: fas;
+            content: '\f002';
+            color: #fff;
+            background-color: $redAirbnb;
+            border-radius: 50%;
+            height: 32px;
+            padding: 10px;
+        }
+    }
+}
+
+.hideFilter {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.notify-modal.alert {
+    position: fixed;
+    top:160px;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transform: translateX(1000%);   
+    padding: 10px;
+    height: fit-content;    
+    font-size: 16px;
+    transition: transform .6s, box-shadow .6s;
+        p,a {
+            margin: 0;
+            font-size: 14px;
+            padding: 5px 0 ;
+        }
+        a {
+            text-decoration: underline;
+        }
+    &.showNotes {
+        transform: translate(93%);
+    }
+}
+@media(max-width: $break-narrow) {
+    .notify-modal.alert.showNotes {
+        transform: translate(-40%);
+        width: 100%;
+    }
+}
+
+@media (max-width: $break-narrow) {
+    .el-notification.right {
+        z-index: 3000;
+    }
+    .main-header {
+        grid-template-rows: 1fr;
+        &.fullheader {
+            height:  80px;
+        }
+        .mini-filter.hide {
+            visibility: visible;
+        }
+        .logo, .nav {
+            display: none;
+        }
+        .mini-filter {
+            display: flex;
+        }
+        .max-filter {
+            display: none;
+        }
+
+        .mobile-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            bottom: -1px;
+            height: 80px;
+            width: 100%;
+            background-color: #FFF;
+            margin: 0;
+
+            .active {
+                span {
+                    color: rgb(255, 56, 92);
+                }
+                p {
+                    color: black;
+                }
+                
+            }
+            a {
+                height: 44px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                color: rgb(176,176,176);
+                font-size: 24px;
+                p {
+                    margin: 0;
+                    margin-top: 1px;
+                    font-size: 10px;
+                }
+
+                .notifications {
+                    position: absolute;
+                    top: 10px;
+                    right: 90px;
+                }
+            }
+
+            .trips {
+                &::before {
+                    content: '\f834';
+                    font-family: fab;
+                    font-weight: 800;
+                    font-size: 24px;
+                }
+            }
+        }
+
+    }
+
+    
+}
+

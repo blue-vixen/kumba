@@ -1,0 +1,450 @@
+// stay-details
+//short info
+.stay-name {
+    font-family: airbnb-regular, sans-serif;
+    font-size: 1.46875rem;
+    line-height: 1.6875rem;
+}
+
+.short-info {
+    margin-bottom: 24px;
+}
+
+.stay-display-order {
+    margin-left: 80px;
+    width: 339px;
+    flex-basis: 40%;
+    // padding: 24px
+}
+
+.stay-display-info {
+    flex-basis: 60%;
+}
+
+.short-info-btn:hover {
+    background-color: rgba(248, 248, 248, 0.952);
+    // background-color: rgb(75, 75, 75);
+    border-radius: 15px;
+}
+
+.short-info .material-icons-outlined {
+    font-size: 1rem;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 20px;
+    margin-right: 4px;
+}
+
+.short-info-txt {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-left: 5px;
+}
+
+.red-star {
+    color: rgb(255, 56, 92);
+}
+
+.wide {
+    margin-inline: 5px !important;
+}
+
+.short-info-gray {
+    color: rgb(113, 113, 113);
+}
+
+.under-line {
+    text-decoration: underline;
+}
+
+.host-img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stay-summery-container {
+    padding: 48px 0px 24px 0px
+}
+
+.stay-summery {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.stay-capacity {
+    font-size: 1rem;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+// stay-short info
+.short-info h4 {
+    margin-block: 0;
+    /* vertical-align: center; */
+}
+
+.spacer {
+    margin-inline: 2px;
+}
+
+.short-heart {
+    color: #ffffff;
+    -webkit-text-stroke: rgb(32, 32, 32);
+    -webkit-text-stroke-width: 1px;
+}
+
+.active {
+    color: $redAirbnb;
+    -webkit-text-stroke: rgba(158, 130, 130, 0);
+}
+
+.short-save:hover {
+    .short-heart {
+        -webkit-text-stroke: #ff385c;
+        -webkit-text-stroke-width: 1px;
+    }
+}
+
+//stay gallery
+.stay-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    grid-template-rows: 180px 180px;
+    grid-gap: 8px;
+    gap: 8px;
+}
+
+.stay-gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.stay-gallery :first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
+
+.stay-gallery :nth-child(3) {
+    border-top-right-radius: 13px;
+}
+
+.stay-gallery :nth-child(5) {
+    border-bottom-right-radius: 13px;
+}
+
+.checked {
+    color: $redAirbnb;
+}
+
+// stay features
+.stay-feature-container {
+    padding-block: 32px;
+}
+
+.feature-block {
+    font-size: 1rem;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 1.25rem;
+    margin-bottom: 24px;
+}
+
+.feature-block:last-child {
+    margin-bottom: 0;
+}
+
+.feature-header-text {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin: 0 0 4px 20px;
+    line-break: strict;
+}
+
+.feature-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin: 0 0 4px 20px;
+    padding: 0;
+    line-break: strict;
+}
+
+// stay description
+.stay-description {
+    padding-block: 48px;
+    line-height: 1.5625rem;
+}
+
+.description-header {
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.stay-description-text {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 1.5rem;
+}
+
+//amenities
+.stay-amenities {
+    padding-top: 48px;
+    padding-bottom: 32px;
+}
+
+.amenities-list {
+    flex-wrap: wrap;
+}
+
+.amenities-header {
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+.amenity-container {
+    padding-bottom: 16px;
+    margin: 0;
+    width: 261px;
+    span {
+        // font-size: 1rem;
+        line-height: 1.25rem;
+        margin-right: 16px;
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+//review section
+.stay-reviews-container {
+    padding-block: 48px;
+}
+
+.stay-reviews-header {
+    padding-block-end: 48px;
+    span {
+        font-size: 1rem;
+    }
+    h2 {
+        display: inline-block;
+        margin: 0;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.625rem;
+        padding-bottom: 32px;
+        margin-left: 3px;
+    }
+}
+
+.stay-reviews-stats {
+    margin-bottom: 32px;
+    .gray-scale {
+        background-color: rgb(163, 163, 163);
+        width: 135px;
+        height: 4px;
+        align-self: center;
+        border-radius: 10px;
+         :first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+         :last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .scale {
+            width: 27px;
+            height: 4px;
+            color: transparent;
+        }
+        .blackbgc {
+            background-color: black;
+        }
+    }
+    .points {
+        margin-left: 10px;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+        font-family: airbnb-medium;
+    }
+}
+
+.gray-scale {
+    background-color: rgb(163, 163, 163);
+    width: 135px;
+    height: 4px;
+    align-self: center;
+    border-radius: 10px;
+     :first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+     :last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .scale {
+        width: 27px;
+        height: 4px;
+        color: transparent;
+    }
+    .blackbgc {
+        background-color: black;
+    }
+}
+
+.review-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 100px;
+    gap: 10px 100px;
+    width: 100%;
+}
+
+.reviews-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 1px;
+}
+
+.review-preview-container {
+    margin-right: 100.25px
+}
+
+.review-preview-header {
+    align-items: center;
+    grid-gap: 20px;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.review-preview-text-container {
+    h4 {
+        padding: 0;
+        margin: 0;
+        // margin-left: 12px;
+    }
+    h5 {
+        margin: 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: rgb(113, 113, 113);
+    }
+}
+
+// add review section
+.add-review {
+    padding-block: 48px;
+    h2 {
+        margin: 0;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.625rem;
+        padding-bottom: 32px;
+        // margin-left: 3px;
+    }
+}
+
+.add-review-header {
+    align-items: center;
+}
+
+.add-review-ctgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 100px;
+    gap: 10px 100px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.add-review-ctg {
+    .points {
+        margin-left: 10px;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+        font-family: airbnb-medium;
+    }
+}
+
+.stars-container {
+    span {
+        font-size: 1rem;
+    }
+}
+
+.add-review-text textarea {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border-radius: 13px;
+    border-color: #bdbcbc;
+}
+
+.add-review-btn {
+    background-color: #ff385c;
+    background-image: linear-gradient( 90deg, #e61e4d 0, #e31c5f 50%, #d70466);
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.share-modal {
+    // width: 30vw;
+    // height: 30vh;
+    position: fixed;
+    top: 19%;
+    left: 61.5%;
+    // padding: 24px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    z-index: 9000;
+    // transition: width 2s;
+    // width: 0px;
+    h1 {
+        margin: 0;
+        background-color: #ff385c;
+        background-image: linear-gradient( 90deg, #e61e4d 0, #e31c5f 50%, #d70466);
+        padding: 10px 30px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        margin: 12px;
+        // margin-bottom: 10px;
+    }
+    .close-modal {
+        position: relative;
+        bottom: 20px;
+        left: 215px;
+    }
+}

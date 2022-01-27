@@ -1,0 +1,464 @@
+.dashboard-page {
+    margin-top: 120px !important;
+    @media(max-width: 460px) {}
+}
+
+.stay-icon {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dash-nav {
+    @media(max-width: 460px) {}
+}
+
+.dash-nav-sticky-container {
+    h1 {
+        font-size: 24px;
+    }
+    .dash-nav-container {
+        text-align: start;
+        width: 100%;
+        span {
+            line-height: 1rem;
+        }
+        button {
+            padding-top: 5px;
+            padding-bottom: 20px;
+            font-family: airbnb-medium;
+            text-align: center;
+            vertical-align: middle;
+            letter-spacing: 0.2px;
+        }
+        .add-stay-btn {
+            padding: 10px 5px;
+            width: 100%;
+            grid-gap: 15px;
+            gap: 15px;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            line-height: 1.75rem;
+        }
+    }
+    .host-info-container {
+        font-size: 1.25rem;
+        img {
+            height: 40px;
+            width: 40px;
+            vertical-align: middle;
+        }
+        h2 {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            color: #484848;
+            text-transform: capitalize;
+            padding-bottom: 25px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            color: #484848;
+        }
+    }
+}
+
+.pre-approved {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    .approve-btn {
+        background: none;
+        border: none;
+        color: green;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        min-height: 40px;
+        outline: 0;
+        text-align: center;
+        text-rendering: geometricprecision;
+        &:hover {
+            background-color: initial;
+            background-position: 0 0;
+            color: #1d7c007a;
+        }
+    }
+    .decline-btn {
+        background: none;
+        border: none;
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        min-height: 40px;
+        outline: 0;
+        padding: 0px 10px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        &:hover {
+            background-color: initial;
+            background-position: 0 0;
+            color: #c000007a;
+        }
+    }
+}
+
+.post-approved {
+    display: flex;
+    .msg-btn,
+    .price-change-btn,
+    .post-approved-btn,
+    .post-declined-btn {
+        background: #ffffff00;
+        border: none;
+        color: rgba(0, 0, 0, 0.664);
+        cursor: pointer;
+    }
+}
+
+.dash-main-container {
+    gap: 30px;
+    padding: 0 20px 20px 20px;
+    @media(max-width: 460px) {
+        padding: 0 0 20px 0;
+    }
+    border-radius: 13px;
+    .dash-header {
+        @media(max-width: 460px) {
+            flex-direction: column;
+            .dash-nav {
+                @media(max-width: 460px) {
+                    flex-direction: row !important;
+                    padding: 0 0 20px 0px;
+                    max-width: 410px;
+                }
+            }
+        }
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        .stats-container {
+            @media(max-width: 460px) {
+                width: 400px;
+                overflow-x: scroll;
+                padding: 0 0 10px 0;
+                .dash-div {}
+            }
+            padding: 0;
+            .dash-div {
+                margin: 0 7.5px;
+            }
+        }
+        td {
+            font-size: 0.85rem;
+            line-height: 0.85rem;
+            padding: 5px;
+            font-family: 'airbnb-medium';
+            text-align: center;
+        }
+        .nums-td {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            font-family: 'airbnb-regular';
+            padding-top: 10px;
+        }
+        small {
+            font-size: 0.85rem;
+            line-height: 0.85rem;
+            font-family: "airbnb-medium";
+            vertical-align: bottom;
+            align-self: end;
+        }
+        .avg {
+            text-indent: 3px;
+        }
+        .dash-div {
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #dddddd;
+            box-shadow: rgb(0 0 0 / 10%) 0px 3px 10px;
+        }
+        div {
+            border-radius: 13px;
+            padding: 0 20px 0 20px;
+            .rates-data {
+                @media(max-width: 460px) {
+                    width: 95px
+                }
+                span:first-child {
+                    padding-bottom: 10px;
+                }
+            }
+            h3 {
+                font-size: 1rem;
+                line-height: 18px;
+                color: #222;
+                padding: 0;
+                margin: 0;
+                padding-bottom: 15px;
+            }
+            div {
+                padding: 0;
+                margin: 0;
+                span {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    padding: 0;
+                    margin: 0;
+                    i {
+                        font-size: 0.8rem;
+                        color: $redAirbnb;
+                        padding-inline-end: 3px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .circle-container {
+                    div {
+                        .circle {
+                            height: 15px;
+                            width: 15px;
+                            border-radius: 50%;
+                        }
+                        .yellow-circle {
+                            background-color: #faf87b;
+                        }
+                        .green-circle {
+                            background-color: #9df89d;
+                        }
+                        .red-circle {
+                            background-color: #fa7b7b;
+                        }
+                        p {
+                            width: 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .fa-star {
+            font-size: 1.25rem;
+            padding-right: 4px;
+             ::before {
+                font-size: 1.25rem;
+            }
+        }
+        .header-menu {
+            text-align: start;
+            @media(max-width: 460px) {}
+             :hover {
+                color: $redAirbnb;
+            }
+            button {
+                font-family: airbnb-medium;
+                text-align: center;
+                vertical-align: middle;
+                letter-spacing: 0.2px;
+                span {
+                    line-height: 1rem;
+                    position: relative;
+                    top: 3px;
+                    @media(max-width: 460px) {}
+                }
+            }
+            .add-stay-btn {
+                padding: 10px 5px;
+                width: 100%;
+                grid-gap: 15px;
+                gap: 15px;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                line-height: 1.75rem;
+            }
+        }
+    }
+    .dash-info-container {
+        flex: 4 1;
+        border-radius: 13px;
+        .host-stay-container {
+            @media(max-width: 460px) {
+                display: none;
+            }
+            .host-stay-list-table {
+                width: 100%;
+                border-spacing: 0 2px;
+                .thead {
+                    width: 100%;
+                    align-items: center;
+                    .thead-container {
+                        display: grid;
+                        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+                        gap: 10px;
+                        align-items: center;
+                        text-align: center;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .tbody {
+                    width: 100%;
+                    .host-stay-preview {
+                        display: grid;
+                        margin-top: 7px;
+                        padding-bottom: 7px;
+                        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+                        gap: 10px;
+                        align-items: center;
+                        text-align: center;
+                        .guest-img {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 50%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                        }
+                        span {
+                            text-align: center;
+                            padding-block: 10px;
+                            img {
+                                margin: auto;
+                                vertical-align: middle;
+                                height: 40px !important;
+                                width: 40px !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .host-order-container {
+                width: 100%;
+                .host-order-list {
+                    width: 100%;
+                    .host-order-list-table {
+                        width: 100%;
+                        border-spacing: 0 2px;
+                        margin-top: 20px;
+                        .thead {
+                            width: 100%;
+                            align-items: center;
+                            .thead-container {
+                                display: grid;
+                                grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
+                                gap: 10px;
+                                align-items: center;
+                                text-align: center;
+                                span {
+                                    font-weight: 700;
+                                }
+                                .guest-img {
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 50%;
+                                    -o-object-fit: cover;
+                                    object-fit: cover;
+                                }
+                            }
+                            div {
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                        .host-stay-preview {
+                            display: grid;
+                            grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
+                            gap: 10px;
+                            align-items: center;
+                            text-align: center;
+                            margin-top: 7px;
+                            padding-bottom: 7px;
+                            .guest-img {
+                                height: 40px;
+                                width: 40px;
+                                border-radius: 50%;
+                                -o-object-fit: cover;
+                                object-fit: cover;
+                            }
+                            span {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cards-container {
+    flex-wrap: wrap;
+    display: none;
+    @media(max-width: 460px) {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        h1 {
+            color: rgb(34, 34, 34);
+            display: block;
+            font-family: airbnb-regular, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0 30px;
+        }
+    }
+}
+
+.order-card,
+.stay-card {
+    width: 350px;
+    max-width: 350px;
+    padding: 15px;
+    margin: 20px 10px 20px 10px;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 10px;
+    align-self: center;
+    .order-card-header,
+    .stay-card-header {
+        img {
+            margin-inline: 5px;
+        }
+        .card-key {
+            font-family: airbnb-medium;
+            font-size: 1.25rem;
+            margin-right: 5px;
+            text-align: start;
+        }
+    }
+    .card-key {
+        font-family: airbnb-medium;
+        font-size: 1.25rem;
+        margin-right: 5px;
+    }
+    .guest-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    span {
+        text-align: center;
+        padding-block: 10px;
+        img {
+            margin: auto;
+            vertical-align: middle;
+            height: 40px !important;
+            width: 40px !important;
+        }
+    }
+}

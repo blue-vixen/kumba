@@ -1,0 +1,331 @@
+.confirm-and-pay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title1 {
+        color: #222222;
+        font-size: 22px;
+        font-weight: bold;
+        padding-bottom: 24px;
+    }
+    .title2 {
+        color: #222222;
+        font-size: 16px;
+    }
+    .title3 {
+        color: #222222;
+        font-size: 14px;
+    }
+    .title4 {
+        color: #222222;
+        font-size: 12px;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-inline-start: -20px;
+        .back-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            background-color: rgba(128, 128, 128, 0);
+            &:hover {
+                background-color: #f7f7f7;
+            }
+            .material-icons-outlined {
+                font-size: 28px;
+            }
+        }
+        h2 {
+            margin-inline-start: 20px;
+            font-size: 32px;
+        }
+    }
+    .details-and-pay {
+        display: flex;
+        .trip-info {
+            .your-trip {
+                .title2 {
+                    font-weight: bold;
+                    padding-bottom: 8px;
+                }
+                .dates,
+                .guests {
+                    color: #222222;
+                    font-size: 16px;
+                }
+                .dates-section,
+                .guests-section {
+                    padding-bottom: 24px;
+                }
+            }
+            .pay-with {
+                display: flex;
+                flex-direction: column;
+                .title2 {
+                    font-weight: bold;
+                    text-decoration: underline;
+                    padding-bottom: 24px;
+                    padding-top: 24px;
+                }
+                .title-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .imgs {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-bottom: 24px;
+                        gap: 7px;
+                        img {
+                            height: 9px;
+                        }
+                    }
+                }
+                .payment-select {
+                    padding-bottom: 24px;
+                    .el-input__inner {
+                        height: 56px;
+                    }
+                }
+            }
+            .required {
+                .title1 {
+                    padding-bottom: 16px;
+                }
+                .title2 {
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+                .host-message {
+                    line-height: 18px;
+                    background-color: rgb(247, 247, 247);
+                    border-radius: 8px;
+                    margin-top: 16px;
+                    margin-bottom: 24px;
+                    padding: 16px;
+                    display: flex;
+                    img {
+                        height: 42px;
+                        width: 42px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                    .host {
+                        padding-inline-start: 16px;
+                        .title2 {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                textarea {
+                    color: rgb(63, 63, 63);
+                    border-radius: 8px;
+                    resize: none;
+                    width: 100%;
+                    height: 100px;
+                    padding: 8px 10px;
+                    font-family: airbnb-regular;
+                }
+                margin-bottom: 24px;
+            }
+            .cancell-policy {
+                p {
+                    margin-bottom: 24px;
+                }
+                span {
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+            }
+            .congrats {
+                p {
+                    span {
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                }
+                .confirm-btn {
+                    background-color: $redAirbnb;
+                    border: none;
+                    color: white;
+                    width: 173px;
+                    height: 48px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+                margin-bottom: 100px;
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                border-bottom: 1px solid #dddddd;
+                margin-bottom: 24px;
+            }
+        }
+        .details-modal.sticky{
+            top: 160px
+        }
+
+        .details-modal {
+            margin-top: 27px;
+            height: 381px;
+            width: 465px;
+            padding: 24px;
+            // margin-top: 65px;
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: 12px;
+            margin-inline-start: 81px;
+            .modal-container {
+                .separator {
+                    height: 2px;
+                    width: 100%;
+                    border-bottom: 1px solid #dddddd;
+                    margin-bottom: 24px;
+                    margin-top: 24px;
+                }
+                .stay-details-container {
+                    display: flex;
+                    img {
+                        height: 106px;
+                        width: 124px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        margin-inline-end: 12px;
+                    }
+                    .details-flex {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .stay-details {
+                            .title4 {
+                                color: #717171;
+                                margin-bottom: 4px;
+                            }
+                        }
+                        .reviews-preview {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .star-preview span {
+                                font-size: 10px;
+                                color: $redAirbnb;
+                            }
+                            .review-avg {
+                                font-size: 12px;
+                                color: #222222;
+                            }
+                            .reviews-total {
+                                font-size: 12px;
+                                color: #717171;
+                            }
+                        }
+                    }
+                }
+                .price-details-container {
+                    .title1 {
+                        padding-bottom: 8px;
+                    }
+                    .price-detail {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 16px;
+                        .underline {
+                            text-decoration: underline;
+                        }
+                        .green {
+                            color: #008a05 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        // cursor: pointer;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.9s;
+        pointer-events: auto;
+    }
+}
+
+.congrats-modal-container {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    .congrats-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 0.6s;
+        width: 550px;
+        padding: 50px;
+        // border: 1px solid rgb(221, 221, 221);
+        border-radius: 12px;
+        background-color: whitesmoke;
+        color: #292929;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .closeModal {
+            position: absolute;
+            cursor: pointer;
+            div {
+                position: relative ;
+                top: -37px;
+                right: -457px;
+                a{
+                    color: #292929;
+                }
+            }
+        }
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: $redAirbnb;
+            margin-bottom: 24px;
+        }
+        .title-1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .title-2 {
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .separator {
+            height: 2px;
+            width: 100%;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 37px;
+        }
+        .links-container {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: underline;
+            font-weight: 500;
+            a {
+                color: #292929;
+            }
+        }
+    }
+}

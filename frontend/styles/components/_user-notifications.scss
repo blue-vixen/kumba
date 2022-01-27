@@ -1,0 +1,187 @@
+.notifications {
+    position: absolute;
+    top: 22px;
+    right: 178px;
+    font-size: 10px;
+    line-height: 1rem;
+    padding: 0 5px;
+    background-color: $redAirbnb;
+    color: white;
+    box-shadow: rgb(255 255 255) 0px 0px 0px 1.5px !important;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.notification-btn {
+    cursor: pointer;
+    font-size: 21px;
+    padding-right: 15px;
+    color: #222222;
+}
+
+.notifications-modal-container {
+    position: relative;
+    z-index: 10;
+
+    .notifications-modal {
+        position: absolute;
+        border: 0.5px solid rgba(118, 118, 118, 0.28);
+        border-radius: 12px;
+        box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+        background-color: #ffffff;
+        padding: 20px;
+        top: 11px;
+        right: 10px;
+        width: 360px;
+        // min-height: 400px;
+
+        .header-notifi {
+            font-size: 20px;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+
+        .notifications-cards {
+            padding: 5px;
+            img {
+                margin-inline-end: 8px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+            .card-details {
+                .host-details {
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-decoration-color: #2222;
+                    font-weight: 600;
+                }
+                .notif-card {
+                    .notifications-card-txt {
+                        display: block;
+                        flex: 3 1;
+                        font-size: 0.75rem;
+                        line-height: 1.125rem;
+                        text-decoration: none;
+                        margin: 0;
+                        padding: 0;
+                        font-weight: unset;
+                    }
+                    .notifications-timer {
+                        margin: 0;
+                        font-weight: lighter;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .no-notifications{
+        }
+        .separator {
+            height: 2px;
+            width: 100%;
+            border-bottom: 1px solid #dddddd;
+            margin:10px 0;
+        }
+    }
+
+}
+
+// .notifications-page {
+//     min-height: 69vh;
+//     margin-top: 120px !important;
+//     grid-template-columns: 160px 1fr 160px !important;
+//     grid-template-rows: 80px 1fr 80px !important;
+// }
+
+// .notifications-header {
+//     font-family: airbnb-regular, sans-serif;
+//     font-size: 2rem;
+//     line-height: 2rem;
+//     font-weight: 800;
+//     margin: 0;
+//     margin-bottom: 40px;
+//     padding: 0;
+// }
+
+// .notifications-list {
+//     // width: 60vw;
+//     // margin: 0 auto;
+//     width: 100%;
+//     margin: 0 auto;
+//     padding: 25px;
+//     border-radius: 25px;
+//     border: 1px solid rgb(221, 221, 221);
+//     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+//     button {
+//         align-self: flex-end;
+//         // vertical-align: bottom;
+//     }
+//     .notifications-container {
+//         min-height: 190px;
+//         .notifications-card {
+//             gap: 50px;
+//             padding-bottom: 15px;
+//             padding-top: 15px;
+//             font-size: 1.125rem;
+//             line-height: 1.75rem;
+//             img {
+//                 height: 50px;
+//                 width: 50px;
+//                 border-radius: 50%;
+//             }
+//             span {
+//                 align-items: flex-start;
+//                 margin: 0;
+//                 padding: 0;
+//                 font-size: 1.125rem;
+//                 line-height: 1.75rem;
+//                 font-weight: 400;
+//                 h3 {
+//                     font-size: 0.875rem;
+//                     line-height: 1.125rem;
+//                     margin: 0;
+//                     padding: 0;
+//                 }
+//                 h4 {
+//                     display: block;
+//                     flex: 3 1;
+//                     font-size: 0.75rem;
+//                     line-height: 1.125rem;
+//                     text-decoration: none;
+//                     margin: 0;
+//                     padding: 0;
+//                     font-weight: unset;
+//                 }
+//             }
+//             .notifications-card-txt {
+//                 display: block;
+//                 flex: 2 1;
+//                 font-size: 1rem;
+//                 line-height: 1.125rem;
+//                 margin: 0;
+//                 padding: 0;
+//                 font-weight: unset;
+//             }
+//             .trips-link {
+//                 font-size: 0.75rem;
+//                 line-height: 1.125rem;
+//                 margin: 0;
+//                 padding: 0;
+//             }
+//         }
+//     }
+// }
+
+// .clear-all-btn {
+//     background-color: rgb(255, 56, 92);
+//     border: none;
+//     border-radius: 15px;
+//     color: rgb(255, 255, 255);
+//     font-size: 15.75px;
+//     font-weight: 600;
+//     height: 32px;
+//     margin: 40px 0 0 0;
+//     padding: 7px 40px 7px 40px;
+//     width: 141.297px;
+// }

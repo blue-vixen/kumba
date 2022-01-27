@@ -3,4 +3,4 @@ Accommodation marketplace app inspired by Airbnb. A collabarative project of 3 j
 
 Created with Vue, Node.js, Express, MongoDB, socket.io.
 
-Why Kumba? Kubma means "At home" in Shona language. 🏡
+Why Kumba? Kumba means "At home" in Shona language. 🏡

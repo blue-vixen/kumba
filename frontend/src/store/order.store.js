@@ -37,7 +37,6 @@ export const orderStore = {
     },
     mutations: {
         setTrip(state, { trip }) {
-            console.log(trip)
             state.currTrip = trip
         },
         setOrders(state, { orders }) {
@@ -48,7 +47,6 @@ export const orderStore = {
         },
         addOrder(state, { order }) {
             state.orders.push(order)
-            console.log(state.orders);
         },
         updateOrder(state, payload) {
             const idx = state.orders.findIndex(order => order._id === payload.order._id)
@@ -69,7 +67,6 @@ export const orderStore = {
             try {
                 const orders = await orderService.query()
                 commit({ type: 'setOrders', orders })
-                console.log(orders)
                 socketService.off(SOCKET_EVENT_ORDER_ABOUT_YOU)
                 socketService.on(SOCKET_EVENT_ORDER_ABOUT_YOU, order => {
                     console.log('New order!', order);

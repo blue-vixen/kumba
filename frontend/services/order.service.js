@@ -114,7 +114,6 @@ function getById(orderId) {
 
 async function save(order) {
     const savedOrder = await httpService.put(`order/${order._id}`, order)
-    console.log(savedOrder)
     return savedOrder
 }
 

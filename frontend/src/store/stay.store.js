@@ -16,7 +16,6 @@ export const stayStore = {
     },
     getters: {
         staysToShow(state, getters) {
-            console.log(state.filterBy)
             const { destination, guests, dates } = getters.getCurrTrip
             var filteredStays = state.stays
             if (destination) {
@@ -26,7 +25,6 @@ export const stayStore = {
 
             const { labels } = state.filterBy
             if (labels.length) {
-                console.log(labels);
                 filteredStays = filteredStays.filter((stay) => {
                     const amns = stay.amenities.map(am => am.name)
                     if (labels.every(label => amns.includes(label))) return true
@@ -37,7 +35,7 @@ export const stayStore = {
             filteredStays = filteredStays.filter(stay =>
                 stay.price >= minPrice && stay.price <= maxPrice)
 
-            const {typeOfPlace} = state.filterBy
+            const { typeOfPlace } = state.filterBy
             if (typeOfPlace.length > 0) {
                 filteredStays = filteredStays.filter(stay => stay.propertyType.includes(typeOfPlace))
                 console.log(filteredStays);
@@ -61,7 +59,6 @@ export const stayStore = {
         },
         setCurrStay(state, { stay }) {
             state.currStay = stay
-            console.log('currStay', state.currStay)
         },
         setFilter(state, { filterBy }) {
             state.filterBy = filterBy

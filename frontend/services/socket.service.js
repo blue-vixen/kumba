@@ -20,9 +20,8 @@ function createSocketService() {
   var socket = null;
   const socketService = {
     async setup() {
-      console.log('here')
       socket = io(baseUrl)
-      console.log('here1')
+
     },
     on(eventName, cb) {
       socket.on(eventName, cb)
@@ -33,7 +32,6 @@ function createSocketService() {
       else socket.off(eventName, cb)
     },
     emit(eventName, data) {
-      console.log('eventName', eventName);
       socket.emit(eventName, data)
     },
     terminate() {

@@ -18,7 +18,6 @@ export default new Vuex.Store({
   mutations: {
     setCurrPage(state, { page }) {
       state.currPage = page
-      console.log(state.currPage)
     }
   },
   actions: {

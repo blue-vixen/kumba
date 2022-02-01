@@ -281,6 +281,33 @@
             display: none;
         }
 
+        // .filter-container {
+        //     display: flex;
+        //     background-color: #fff;
+        //     grid-column: 1 / -1;
+        //     height: 100vh;
+        //     z-index: 1000;
+        //     .max-filter {   
+        //         .input-container {
+        //             &:hover {
+        //                 background-color: #fff;
+        //             }
+        //         }       
+        //         border: none;
+        //         box-shadow: none;
+        //         display: flex;
+        //         flex-direction: column;
+        //         align-items: flex-start;
+        //        label {
+        //             display: flex;
+        //             flex-direction: column;
+        //         }
+        //         .search-btn, .trip-calendar, .guests {
+        //             display: none;
+        //         }
+        //     }
+        // }
+
         .mobile-nav {
             display: flex;
             align-items: center;

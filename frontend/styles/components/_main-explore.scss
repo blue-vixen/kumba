@@ -6,12 +6,12 @@
     padding-top: 16px;
     padding-bottom: 250px;
 
-    @media (max-width: $break-narrow) {
-        display: flex;
-        flex-direction: column;
-        padding-right: 50px;
-        padding-left: 50px;
-    }
+    // @media (max-width: $break-narrow) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     padding-right: 50px;
+    //     padding-left: 50px;
+    // }
 }
 
 // ---------------------------------FILTER BTNS------------------------------
@@ -64,6 +64,18 @@
         font-weight: 400 !important;
         line-height: 18px !important;
     }
+}
+
+@media (max-width: $break-narrow) {
+  .explore-btns {
+      overflow-y: scroll;
+      max-width: 300px;
+
+      .explore-btn {
+        white-space: nowrap;
+      }
+  }
+
 }
 
 // ----------------------price-filter----------------------------------------

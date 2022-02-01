@@ -16,36 +16,29 @@
 
 .main-layout2.home-page {
     margin-top: 0;
-    // margin-bottom: 74px;
+
 }
 
 .main-layout2 {
     margin-top: 175px;
     display: grid;
     grid-template-columns: 80px 1fr 80px;
-    // margin-bottom: 74px;
+
     >* {
         grid-column: 2;
     }
     >*.full {
         grid-column: 1 / -1;
     }
-    // @include for-narrow-layout {
-    //     @include layoutGTC($break-narrow)
-    // }
-    // @include for-normal-layout {
-    //     @include layoutGTC($break-normal)
-    // }
 }
 
 @media (max-width: $break-narrow) {
     .main-layout2 {
-        // max-width: $padded-break-narrow;
         display:grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 326px auto;
         grid-template-rows: auto;
         >* {
-            grid-column: 1;
+            grid-column: 2;
         }
     }
 

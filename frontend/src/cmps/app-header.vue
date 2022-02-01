@@ -56,7 +56,7 @@
                 <button class="user-menu-btn clickable flex align-center clickable" @click="shouldShow = !shouldShow">
                     <span class="material-icons-round" v-if="!currUser"> account_circle </span>
                     <span v-else>
-                        <img v-if="currUser" class="avatar" :src="imgUrl" />
+                        <img v-if="currUser" class="avatar" :src="avatarUrl" />
                     </span>
                 </button>
             </div>
@@ -67,16 +67,15 @@
                 <a href="#/messages" class="a1" v-if="currUser">Messages</a>
                 <a href="#/trips" class="a1" v-if="currUser">Trips</a>
                 <a href="#/wishList" class="a1 gray-box-shadow" v-if="currUser">Wish List</a>
-                <!-- <a href="#/notifications" v-if="currUser">Notifications</a> -->
                 <a href="#/host" v-if="!currUser || !loggedinUser.isHost">Host your home</a>
                 <a href="#/dashboard" v-if="currUser">Dashboard</a>
                 <a href="#/account" class="gray-box-shadow" v-if="currUser">Account</a>
-                <!-- <a href="#/help">Help</a> -->
                 <a @click.stop="logout" class="clickable" v-if="currUser">Logout</a>
                 <a href="#/about">About</a>
             </div>
         </div>
         <stay-filter :class="{ hide: miniFilter, hideFilter }" />
+        <!-- <stay-filter /> -->
         <section class="mobile-nav">
             <router-link class="active" to="/explore">
                 <span class="material-icons-outlined"> search </span>
@@ -163,11 +162,6 @@ export default {
         },
     },
     computed: {
-        lastNote() {
-            if (this.$store.getters.lastNotification) {
-                return this.$store.getters.lastNotification;
-            } else return "";
-        },
         notify() {
             return this.$store.getters.notify;
         },
@@ -177,7 +171,7 @@ export default {
         notificationsCount() {
             return this.$store.getters.notificationsCount;
         },
-        imgUrl() {
+        avatarUrl() {
             var user = this.$store.getters.loggedinUser;
             return user.imgUrl ? user.imgUrl : require("../assets/images/avatar.png");
         },
@@ -239,6 +233,3 @@ export default {
     },
 };
 </script>
-
-<style>
-</style>
